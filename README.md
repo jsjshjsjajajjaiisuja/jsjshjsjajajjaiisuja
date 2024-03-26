@@ -1,12 +1,13 @@
-- 👋 Hi, I’m @jsjshjsjajajjaiisuja
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
-<!---
-jsjshjsjajajjaiisuja/jsjshjsjajajjaiisuja is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+local player = game.Players.LocalPlayer
+if player.Character then
+if player.Character:FindFirstChild("Humanoid") then
+player.Character.Humanoid.Name = "1"
+end
+local l = player.Character["1"]:Clone()
+l.Parent = player.Character
+l.Name = "Humanoid"; wait(0.1)
+player.Character["1"]:Destroy()
+workspace.CurrentCamera.CameraSubject = player.Character.Humanoid
+player.Character.Animate.Disabled = true; wait(0.1)
+player.Character.Animate.Disabled = false
+end
